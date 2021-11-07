@@ -1,0 +1,3 @@
+[submodule "Vendor/Tara"]
+	path = Vendor/Tara
+	url = https://github.com/Tara-Engine/Tara.git
