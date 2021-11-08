@@ -11,7 +11,7 @@ You **should** change the name of the workspace and the project.
 you also **should** use this file to change project settings, and NOT use Visual Studios for that.
 --]]
 
-workspace("Tara-Template") 	--VS solution name
+workspace("Tara-Demos") 	--VS solution name
 	architecture("x64")		--CPU architecture type. We only support 64 bit
 	configurations{"Debug", "Release"}
 	startproject("Project") --The project to run as an executable
@@ -28,8 +28,8 @@ group("")
 
 
 --this is your actual project
-project("Project")
-	location("Project")
+project("Demos")
+	location("Demos")
 	kind("ConsoleApp")
 	language("C++")
 	cppdialect("C++17") --prefered C++19, but premake does not support that yet
