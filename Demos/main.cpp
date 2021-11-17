@@ -13,6 +13,7 @@ This file does not do much, it does not even have a layer. However, it Does load
 //the various layers
 #include "Selector/SelectorLayer.h"
 #include "Basic/BasicLayer.h"
+#include "Tilemap/TilemapLayer.h"
 
 
 
@@ -45,6 +46,9 @@ void LayerSwitch(const std::string& newLayerName, Tara::LayerNoRef currentLayer)
 	}
 	else if (newLayerName == "Basic") {
 		Tara::Application::Get()->GetScene()->PushLayer(std::make_shared<BasicLayer>());
+	}
+	else if (newLayerName == "Tilemap") {
+		Tara::Application::Get()->GetScene()->PushLayer(std::make_shared<TilemapLayer>());
 	}
 	else {
 		LOG_S(WARNING) << "Attempted to switch to unknown layer: " << newLayerName;

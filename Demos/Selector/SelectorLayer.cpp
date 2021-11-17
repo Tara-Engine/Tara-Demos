@@ -29,7 +29,9 @@ void SelectorLayer::Activate()
 		LayerSwitch("Basic", this->weak_from_this());
 	}, TRANSFORM_2D(-8, 20, 0, 16, 4), "Basic Layer");
 
-	
+	auto button2 = Tara::CreateEntity<ButtonEntity>(Tara::EntityNoRef(), weak_from_this(), [this]() {
+		LayerSwitch("Tilemap", this->weak_from_this());
+	}, TRANSFORM_2D(-8, 12, 0, 16, 4), "Tilemap Layer");
 }
 
 void SelectorLayer::Deactivate()

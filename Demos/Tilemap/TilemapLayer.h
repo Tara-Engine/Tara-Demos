@@ -1,17 +1,17 @@
 #pragma once
 #include <Tara.h>
 
-class BasicLayer : public Tara::Layer {
+class TilemapLayer : public Tara::Layer {
 public:
 	/// <summary>
 	/// Constructor
 	/// </summary>
-	BasicLayer();
+	TilemapLayer();
 
 	/// <summary>
 	/// Destructor
 	/// </summary>
-	virtual ~BasicLayer();
+	virtual ~TilemapLayer();
 
 	/// <summary>
 	/// Activattion function, called when layer is added to scene.
@@ -23,22 +23,6 @@ public:
 	/// Deactivation function, called when layer is removed from scene.
 	/// </summary>
 	virtual void Deactivate() override;
-
-	/// <summary>
-	/// Update function, called every frame (before draw). 
-	/// Used to handle game logic.
-	/// No need to override. If you do, make sure to call Layer::Update(deltaTime)
-	/// </summary>
-	/// <param name="deltaTime"></param>
-	//virtual void Update(float deltaTime) override;
-
-	/// <summary>
-	/// Draw function, called every frame.
-	/// Used to draw stuff
-	/// No need to overide. If you do, make sure to call Layer::Draw()
-	/// </summary>
-	/// <param name="deltaTime"></param>
-	//virtual void Draw(float deltaTime) override;
 
 	/// <summary>
 	/// Event handler. Called for every window event.
